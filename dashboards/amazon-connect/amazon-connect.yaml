@@ -21050,7 +21050,7 @@ dashboards:
                 Narrative: "<narrative>\n  <block align=\"center\">\n    <inline font-size=\"\
                   68.8px\">Amazon Connect Cost Insight Dashboard</inline>\n  </block>\n\
                   \  <br/>\n  <block align=\"center\">\n    <inline font-size=\"68.8px\"\
-                  >\n      <b>v1.1.1</b>\n    </inline>\n  </block>\n  <br/>\n  <block align=\"\
+                  >\n      <b>v1.2.0</b>\n    </inline>\n  </block>\n  <br/>\n  <block align=\"\
                   center\"/>\n  <br/>\n  <block align=\"right\"/>\n  <br/>\n  <block align=\"\
                   right\"/>\n  <br/>\n  <block align=\"right\"/>\n  <br/>\n  <block align=\"\
                   right\"/>\n  <br/>\n  <block align=\"right\"/>\n  <br/>\n  <block align=\"\
@@ -21515,6 +21515,7 @@ views:
       - product['servicename']
       - pricing_unit
       - line_item_unblended_rate
+      - resource_tags['aws_connect_system_endpoint']
     data: |-
       CREATE OR REPLACE VIEW ${athena_database_name}.resource_connect_view AS
       SELECT DISTINCT
@@ -21547,6 +21548,7 @@ views:
       , product_product_family "product_family"
       , product_servicecode "service"
       , product['servicename'] "servicename"
+      , resource_tags['aws_connect_system_endpoint'] "aws_connect_system_endpoint"
       , "sum"(line_item_usage_amount) usage_quantity
       , "sum"(line_item_unblended_cost) unblended_cost
       FROM
@@ -21559,5 +21561,5 @@ views:
                                                                                                                                                     ,'AmazonConnectCases'
                                                                                                                                                     ,'AmazonConnectVoiceID'
                                                                                                                                                     ,'CustomerProfiles')))
-      GROUP BY 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29
+      GROUP BY 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, https://raw.githubusercontent.com/AleksYan/aws-cudos-framework-deployment/refs/heads/main/dashboards/amazon-connect/amazon-connect.yaml30
 

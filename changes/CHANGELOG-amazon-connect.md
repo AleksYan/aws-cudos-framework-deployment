@@ -1,5 +1,8 @@
 # What's new in Amazon Connect Dashboard
 
+## Amazon Connect Dashboard - v1.2.0
+* added connect granular billing
+
 ## Amazon Connect Dashboard - v1.1.1
 * minor fixes
 
